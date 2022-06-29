@@ -30,11 +30,3 @@ body {
 #dark-toggle:checked ~ label div.toggle-circle {
   @apply translate-x-3;
 }
-.skill {
-  @apply
-    relative
-    flex items-center justify-center
-    bg-white dark:bg-slate-700
-    w-28 h-28
-    rounded-full cursor-pointer
-}
