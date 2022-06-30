@@ -7,6 +7,7 @@
     <title>Portfolio Tailwind CSS</title>
     <link href="dist/output.css" rel="stylesheet"/>
     <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script>
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
@@ -74,28 +75,21 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36 dark:bg-dark">
+    <section id="home" class="pt-36 pb-32 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold text-primary md:text-xl">Halo Semua 👋, saya <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl ">Rifani</span></h1>
-            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">IT Suport & <span class="text-dark dark:text-white">Web Development</span></h2>
-            <p class="mb-10 font-medium leading-relaxed text-secondary">Belajar web programming itu mudah dan menyenangkan bukan. <span class="font-bold text-dark dark:text-white">bukan!</span></p>
+            <h1 id="sapa" class="text-base font-semibold text-primary md:text-xl">Halo Semua 👋, saya</h1>
+            <h1  id="nama" class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl ">Rifani</h1>
+            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl" id="kemampuan">IT Suport & <span class="text-dark dark:text-white">Web Development</span></h2>
+            <p class="mb-10 font-medium leading-relaxed text-secondary" id="paragraf">Belajar web programming itu mudah dan menyenangkan bukan. <span class="font-bold text-dark dark:text-white">bukan!</span></p>
 
-            <a href="https://api.whatsapp.com/send?phone=628977505234&text=Assalamu`alaikum%20Admin" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Hubungi Saya</a>
+            <a id="tombol" href="https://api.whatsapp.com/send?phone=628977505234&text=Assalamu`alaikum%20Admin" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Hubungi Saya</a>
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10 lg:right-0 lg:mt-9">
-              <img src="dist/img/hero/undraw_Developer_activity_re_39tg.png" alt="Sandhika Galih" class="relative z-10 mx-auto max-w-full animate-bounce" />
-              <!-- <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
-                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill="#14b8a6"
-                    d="M47.4,-51C59.2,-35.6,65.1,-17.8,63.4,-1.7C61.7,14.5,52.6,28.9,40.8,36.6C28.9,44.2,14.5,45,-2,47C-18.4,49,-36.8,52.1,-45.4,44.5C-53.9,36.8,-52.5,18.4,-51.2,1.3C-49.9,-15.8,-48.7,-31.7,-40.2,-47.1C-31.7,-62.4,-15.8,-77.3,1,-78.3C17.8,-79.2,35.6,-66.3,47.4,-51Z"
-                    transform="translate(100 100) scale(1.1)"
-                  /> -->
-                </svg>
-              </span>
+              <img src="dist/img/hero/avatar.svg" alt="Rifani" class="z-10 mx-auto max-w-full" id="logo"/>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
             </div>
           </div>
         </div>
@@ -107,18 +101,24 @@
     <section id="about" class="pt-36 pb-32 w-full py-20 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="mb-10 w-full px-4 lg:w-1/2">
+          <div class="mb-10 w-full px-4 lg:w-1/2"  data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <h4 class="mb-3 text-lg font-bold uppercase text-primary">Profil Saya</h4>
             <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">Coba aja dulu.</h2>
             <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Berawal dari mencoba. akhirnya jadi suka sama Program</p>
           </div>
-          <div class="w-full px-4 lg:w-1/2">
+          <div class="w-full px-4 lg:w-1/2"  data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine" data-aos-delay="300">
             <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Kemampuan</h3>
             <!-- <p class="mb-6 text-base font-medium text-secondary lg:text-lg">
              Experience skill Saya yang semakin meningkat.<br>
              <span class="text-white">Tak Kenal maka Kenalan 😊</span> 
             </p> -->
-            <div class="flex items-center">
+            <div class="flex items-center" data-aos="fade-left"
+            
+            data-aos-easing="ease-in-sine" data-aos-delay="400">
               <!-- HTML -->
               <a
                 href="https://www.w3schools.com/html"
@@ -174,7 +174,7 @@
     <section id="portfolio" class="bg-slate-500 pt-36 pb-16 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto mb-16 max-w-xl text-center">
+          <div class="mx-auto mb-16 max-w-xl text-center" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
             <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
             <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Project Terbaru</h2>
             <p class="text-md font-medium text-secondary md:text-lg">
@@ -185,26 +185,26 @@
         </div>
 
         <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
             <div class="overflow-hidden rounded-md shadow-md">
               <img src="dist/img/portfolio/cbt.png" alt="Landing Page" width="w-full" />
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Aplikasi Ujian Berbasis Web</h3>
-            <p class="text-base font-medium text-secondary">Aplikasi CBT Berbasis Web yang menyediakan fitur Lengkap.</p>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-primary dark:text-white">Aplikasi Ujian Berbasis Web</h3>
+            <p class="text-base font-medium text-dark dark:text-secondary">Aplikasi CBT Berbasis Web yang menyediakan fitur Lengkap.</p>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="overflow-hidden rounded-md shadow-md">
               <img src="dist/img/portfolio/absen.png" alt="E-Commerce" width="w-full" />
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Absen Siswa</h3>
-            <p class="text-base font-medium text-secondary">Pengemabangan Aplikasi Demo dengan fitur kompetable.</p>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-primary dark:text-white">Absen Siswa</h3>
+            <p class="text-base font-medium text-dark dark:text-secondary">Pengemabangan Aplikasi Demo dengan fitur kompetable.</p>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="200">
             <div class="overflow-hidden rounded-md shadow-md">
               <img src="dist/img/portfolio/ppdb.png" alt="Technical Documentation" width="w-full" />
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">PPDB Online</h3>
-            <p class="text-base font-medium text-secondary">Profil Dan PPDB Online menggunakan TailwindCSS</p>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-primary dark:text-white">PPDB Online</h3>
+            <p class="text-base font-medium text-dark dark:text-secondary">Profil Dan PPDB Online menggunakan TailwindCSS</p>
           </div>
           <!-- <div class="mb-12 p-4 md:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
@@ -220,12 +220,12 @@
 
     <!-- Service Section Start -->
     <section id="services" class="pt-36 pb-32 bg-center justify-center dark:bg-dark">
-      <div class="container px-3 md:pl-10 md:pr-5 lg:pl-28 lg:pr-16">
+      <div class="container px-3 md:pl-10 md:pr-5 lg:pl-28 lg:pr-16" data-aos="flip-left" data-aos-duration="1000">
         <h2 class="text-3xl font-semibold text-secondary dark:text-white text-center">Services</h2>
         <p class="text-primary font-medium mb-5 text-center">🤔Apa Yang Saya Bisa🤔?</p>
 
         <div class="p-4 w-full flex flex-wrap lg:flex-nowrap items-center justify-center">
-          <div id="content-services" class="hover:scale-95 transition duration-300 ease-in-out w-full h-max my-1 p-2 md:w-72">
+          <div id="content-services" class="hover:scale-95 transition duration-300 ease-in-out w-full h-max my-1 p-2 md:w-72" data-aos="flip-right" data-aos-anchor=".other_element" data-aos-duration="1000" data-aos-delay="200">
             <div class="border-2 p-5 md:h-60 border-primary rounded-2xl h-max">
               <span>
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="60" class="mx-auto">
@@ -238,7 +238,7 @@
             </div>
           </div>
 
-          <div id="content-services" class="hover:scale-95 transition duration-300 ease-in-out h-max my-1 p-2 md:w-72">
+          <div id="content-services" class="hover:scale-95 transition duration-300 ease-in-out h-max my-1 p-2 md:w-72" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="200">
             <div class="border-2 p-5 md:h-60 border-primary rounded-2xl w-full h-max ">
               <span>
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="60" class="mx-auto">
@@ -250,7 +250,7 @@
               <p class="text-center text-dark dark:text-primary" >Saya Cukup Paham, Cara Membuat Website Bagian Depan "Front End"</p>  
             </div>
           </div>
-          <div id="content-services" class="hover:scale-95 transition duration-300 ease-in-out h-max my-1 p-2 md:w-72">
+          <div id="content-services" class="hover:scale-95 transition duration-300 ease-in-out h-max my-1 p-2 md:w-72" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="200">
             <div class="border-2 p-5 md:h-60 border-primary rounded-2xl w-full h-max">
               <span>
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="60" class="mx-auto">
@@ -273,53 +273,63 @@
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
             <!-- <h4 class="mb-2 text-lg font-semibold text-primary">Sertifikat</h4> -->
-            <h2 class="mb-4 text-3xl font-bold text-primary dark:text-white sm:text-4xl lg:text-5xl">Sertifikat</h2>
+            <h2 class="mb-4 text-3xl font-bold text-primary dark:text-white sm:text-4xl lg:text-5xl" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000">Sertifikat</h2>
             <!-- <p class="text-md font-medium text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quisquam perspiciatis blanditiis dolores?</p> -->
           </div>
         </div>
         <div class="flex flex-wrap">
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/2">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/2" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" data-aos-delay="100">
             <div class="mb-10 overflow-hidden rounded-xl bg-slate-200 shadow-lg dark:bg-slate-400 hover:scale-95 transition duration-300 ease-in-out">
               <img src="dist/img/sertifikat/1.png" alt="Sanad" class="w-full overflow-hidden"/>
               <div class="py-2 px-6">
                 <h3>
-                  <a href="#" class="mb-3 block truncate text-xl text-center font-semibold text-dark hover:text-primary dark:text-secondary ">Sertifikat Sanad Hadits</a>
+                  <a href="#" class="mb-3 block truncate text-xl text-center font-semibold text-dark hover:text-primary dark:text-dark dark:hover:text-primary ">Sertifikat Sanad Hadits</a>
                 </h3>
                 <!-- <p class="mb-6 text-base font-medium text-secondary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia beatae quisquam?</p>
                 <a href="#" class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">Baca Selengkapnya</a> -->
               </div>
             </div>
           </div>
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/2">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/2" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" data-aos-delay="200">
             <div class="mb-10 overflow-hidden rounded-xl bg-slate-200 shadow-lg dark:bg-slate-400 hover:scale-95 transition duration-300 ease-in-out">
               <img src="dist/img/sertifikat/2.png" alt="IDS" class="w-full overflow-hidden"/>
               <div class="py-2 px-6">
                 <h3>
-                  <a href="#" class="mb-3 block truncate text-xl text-center font-semibold text-dark hover:text-primary dark:text-secondary ">Sertifikat IDS</a>
+                  <a href="#" class="mb-3 block truncate text-xl text-center font-semibold text-dark hover:text-primary dark:text-dark dark:hover:text-primary ">Sertifikat IDS</a>
                 </h3>
                 <!-- <p class="mb-6 text-base font-medium text-secondary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia beatae quisquam?</p>
                 <a href="#" class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">Baca Selengkapnya</a> -->
               </div>
             </div>
           </div>
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/2">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/2" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" data-aos-delay="300">
             <div class="mb-10 overflow-hidden rounded-xl bg-slate-200 shadow-lg dark:bg-slate-400 hover:scale-95 transition duration-300 ease-in-out">
               <img src="dist/img/sertifikat/3.png" alt="manajemen" class="w-full overflow-hidden"/>
               <div class="py-2 px-6">
                 <h3>
-                  <a href="#" class="mb-3 block truncate text-xl text-center font-semibold text-dark hover:text-primary dark:text-secondary ">Sertifikat Sistem Manajemen Mutu</a>
+                  <a href="#" class="mb-3 block truncate text-xl text-center font-semibold text-dark hover:text-primary dark:text-dark dark:hover:text-primary ">Sertifikat Sistem Manajemen Mutu</a>
                 </h3>
                 <!-- <p class="mb-6 text-base font-medium text-secondary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia beatae quisquam?</p>
                 <a href="#" class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">Baca Selengkapnya</a> -->
               </div>
             </div>
           </div>
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/2">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/2" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" data-aos-delay="400">
             <div class="mb-10 overflow-hidden rounded-xl bg-slate-200 shadow-lg dark:bg-slate-400 hover:scale-95 transition duration-300 ease-in-out">
               <img src="dist/img/sertifikat/4.png" alt="coding" class="w-full overflow-hidden"/>
               <div class="py-2 px-6">
                 <h3>
-                  <a href="#" class="mb-3 block truncate text-xl text-center font-semibold text-dark hover:text-primary dark:text-secondary ">Sertifikat Zero Coding</a>
+                  <a href="#" class="mb-3 block truncate text-xl text-center font-semibold text-dark hover:text-primary dark:text-dark dark:hover:text-primary ">Sertifikat Zero Coding</a>
                 </h3>
                 <!-- <p class="mb-6 text-base font-medium text-secondary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia beatae quisquam?</p>
                 <a href="#" class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">Baca Selengkapnya</a> -->
@@ -335,7 +345,7 @@
     <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto mb-16 max-w-xl text-center">
+          <div class="mx-auto mb-16 max-w-xl text-center"  data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
             <h4 class="mb-2 text-lg font-semibold text-primary">Contact</h4>
             <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Hubungi Kami</h2>
             <!-- <p class="text-md font-medium text-secondary md:text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, sed.</p> -->
@@ -343,19 +353,19 @@
         </div>
         <form action="https://formsubmit.co/425108fff17de7f20536434bea1531e8" method="POST"  name="_next" value="/thankyou.html" id="contact-form">
           <div class="w-full lg:mx-auto lg:w-2/3">
-            <div class="mb-8 w-full px-4">
+            <div class="mb-8 w-full px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
               <label for="name" class="text-base font-bold text-primary">Nama</label>
               <input type="text" id="name" name="name" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
             </div>
-            <div class="mb-8 w-full px-4">
+            <div class="mb-8 w-full px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
               <label for="email" class="text-base font-bold text-primary">Email</label>
               <input type="email" id="email" name="email" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"/>
             </div>
-            <div class="mb-8 w-full px-4">
+            <div class="mb-8 w-full px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
               <label for="message" class="text-base font-bold text-primary">Pesan</label>
               <textarea type="email" name="message" id="email" class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
             </div>
-            <div class="w-full px-4">
+            <div class="w-full px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
               <!-- <input type="hidden" name="_next" value="/thankyou.html"> -->
              <button type="submit" class="w-full rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg" name="_captcha" value="false">
                 Kirim</button>
@@ -373,14 +383,14 @@
     <footer class="bg-dark pt-24 pb-12">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <h2 class="mb-5 text-4xl font-bold text-white">Rifani</h2>
             <h3 class="mb-2 text-2xl font-bold">Hubungi Kami</h3>
             <p>Arrifani0@gmail.com</p>
             <p>Link. Panyindangan</p>
             <p>Serang, Banten</p>
           </div>
-          <div class="mb-12 w-full px-4 md:w-1/3">
+          <div class="mb-12 w-full px-4 md:w-1/3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <h3 class="mb-5 text-xl font-semibold text-white">Kategori Tulisan</h3>
             <ul class="text-slate-300">
               <li>
@@ -394,7 +404,7 @@
               </li>
             </ul>
           </div>
-          <div class="mb-12 w-full px-4 md:w-1/3">
+          <div class="mb-12 w-full px-4 md:w-1/3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
             <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
             <ul class="text-slate-300">
               <li>
@@ -419,8 +429,8 @@
           </div>
         </div>
 
-        <div class="w-full border-t border-slate-700 pt-10">
-          <div class="mb-5 flex items-center justify-center">
+        <div class="w-full border-t border-slate-700 pt-10"   data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" >
+          <div class="mb-5 flex items-center justify-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
               <!-- Facebook -->
               <a
                 href="https://web.facebook.com/maftuhah.zamiyah"
@@ -490,6 +500,33 @@
       <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
     </a>
     <!-- Back to top End -->
+
+    <!-- aos script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- <script>
+      import AOS from 'aos';
+import 'aos/dist/aos.css';
+    </script>
+    <script>
+      AOS.init();
+    </script> -->
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script> -->
+    <script>
+      gsap.from("#logo", {duration: 2, rotateY: 360, opacity:0});
+      // gsap.to('#sapa',{duration : 2, delay : 1, text : 'Halo Semua 👋, saya'});
+      gsap.from("#sapa", {duration: 1, x:-50, opacity:0});
+      gsap.from("#nama", {duration: 1, delay:1.2, x:-50, opacity:0});
+      gsap.from("#kemampuan", {duration: 1, x:-70, opacity:0, delay: 1.3, ease: 'back' });
+      gsap.from("#paragraf", {duration: 1, x:-90, opacity:0, delay: 1.4, ease: 'back' });
+      gsap.from("#tombol", {duration: 1, rotateY: 360, opacity:0, delay: 1.5, ease: 'back' });
+
+      
+    </script>
     <script src="dist/js/script.js"></script>
   </body>
 </html>
